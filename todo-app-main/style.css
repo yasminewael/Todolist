@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(235, 21%, 11%);
+  font: 18px "Josefin Sans", sans-serif;
+}
+.header {
+  background: url(./images/bg-desktop-dark.jpg) no-repeat;
+  height: 280px;
+  position: relative;
+}
+h1{
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+}
+
+.switch{
+  background: url(./images/icon-sun.svg) no-repeat;
+  width: 20%;
+  height: 30px;
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  top: 20%;
+  left: 70%;
+
+
+}
+.todo-container,
+.todo-list,
+.actions {
+  margin: 30px auto 0;
+  width: 500px;
+  background-color: hsl(235, 24%, 19%);
+  position: relative;
+  top: -150px;
+}
+.todo-container .create-todo,
+.todo-list {
+  padding: 15px;
+  position: relative;
+}
+.todo-container .create-todo input {
+  display: inline-block;
+  padding: 10px 15px;
+  border: none;
+  background-color: hsl(235, 24%, 19%);
+  color: hsl(234, 39%, 85%);
+  font: 20px "Josefin Sans", sans-serif;
+}
+input:focus {
+  outline: none;
+}
+.todo-container .create-todo .add {
+  background-image: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 25px;
+}
+.todo-list {
+  padding: 0;
+}
+.content-item,
+.no-tasks-message,
+.actions {
+  border-bottom: 1px solid #777;
+  display: flex;
+  padding: 20px;
+  color: hsl(234, 39%, 85%);
+}
+.no-tasks-message {
+  color: #777;
+  font-size: 20px;
+  padding-left: 30px;
+}
+.check {
+  border: 1px solid #777;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.finished {
+  text-decoration: line-through;
+}
+.cross {
+  background: url(./images/icon-cross.svg) no-repeat;
+  width: 5%;
+  height: 30px;
+  position: absolute;
+  cursor: pointer;
+  left: 450px;
+}
+.actions {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+  border: none;
+  font-size: 12px;
+  color: #777;
+}
+.actions > div:not(:first-child):hover {
+  color: hsl(234, 39%, 85%);
+  cursor: pointer;
+}

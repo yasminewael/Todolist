@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(235, 21%, 11%);
+  font-size: 18px;
+}
+.header {
+  background-image: url(./images/bg-desktop-dark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 280px;
+}
+.content-item,
+.no-tasks-message {
+  display: flex;
+  background-color: hsl(235, 24%, 19%);
+  border-bottom: 1px solid rgb(128, 123, 123);
+  padding: 20px 5px;
+  color: white;
+  width: 100%;
+}
+/*.todo-item, .no-tasks-message{
+    border-bottom:1px solid rgb(128, 123, 123);
+    padding: 10px 30px ;
+    display: grid;
+    background-color: hsl(235, 24%, 19%);
+    color: white;
+    width: 100%;
+}*/
+
+.check {
+  width: 5%;
+  height: 23px;
+  margin: auto 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cross {
+  background-image: url(./images/icon-cross.svg);
+  background-color: hsl(235, 24%, 19%);
+  width: 5%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  position: relative;
+  left: 350px;
+  cursor: pointer;
+  top: 3px;
+}
+.create-todo {
+  width: 35%;
+  margin: 0 auto;
+  position: relative;
+  top: -100px;
+  height: 50px;
+  border-radius: 0px;
+}
+.text-todo {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding-left: 60px;
+  color: white;
+  display: inline-block;
+}
+input:focus {
+  outline: none;
+}
+.add {
+  display: inline-block;
+  width: 7%;
+  position: absolute;
+  right: -10px;
+  top: 8px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+}
+.todo-list {
+  width: 35%;
+  margin: 0 auto;
+  position: relative;
+  top: -80px;
+}
+
+.no-tasks-message {
+  color: #777;
+  font-size: 20px;
+  padding-left: 30px;
+}
+.finished {
+  text-decoration: line-through;
+}
+.actions {
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.all-tasks, .active-tasks, .completed-tasks{
+  border:1px solid yellow;
+}
+.number{
+  border:1px solid aqua;
+  display: inline;
+}
+/*.actions {
+  border-bottom: none;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.action-item {
+  background-color: hsl(235, 24%, 19%);
+  font-size: 0.7rem;
+}
+.number-tasks {
+  width: 4%;
+  height: 12px;
+  border-radius: 3px;
+}*/
+.clear-complete {
+  cursor: pointer;
+}

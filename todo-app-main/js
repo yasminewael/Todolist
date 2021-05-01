@@ -1,0 +1,66 @@
+const textInput = document.querySelector(".text-todo");
+const plusButton = document.querySelector(".add");
+const listContainer = document.querySelector(".todo-list");
+const noTaskToShow = document.querySelector(".no-tasks-message");
+const tasksCount = document.querySelector(".all-tasks");
+const tasksActive = document.querySelector(".active-tasks");
+const completed = document.querySelector(".completed-tasks");
+
+const tasksArray = [];
+
+plusButton.addEventListener("click", function () {
+  if (textInput.value === "" || textInput === null) {
+    alert("no data");
+  } else if (document.body.contains(noTaskToShow)) {
+    noTaskToShow.remove();
+  }
+
+   
+  ////// create element
+  let check = document.createElement("div");
+  let cross = document.createElement("div");
+  let mainDiv = document.createElement("div");
+
+  check.className = "check";
+  cross.className = "cross";
+
+  mainDiv.appendChild(check);
+  mainDiv.appendChild(cross);
+
+let text = document.createTextNode(textInput.value);
+  mainDiv.appendChild(text);
+  mainDiv.className = "content-item";
+
+  listContainer.appendChild(mainDiv);
+  calcTasks();
+});
+
+ //////delete 
+document.addEventListener("click", function (e) {
+  if (e.target.className == "cross") {
+    e.target.parentNode.remove();
+  }
+});
+
+// // document.addEventListener("click", function(e){
+
+// // if(e.target.classList.contains("check")){
+// //   classList.toggle("finished");
+// //   ///// document.getElementsByClassName('content-item')[0].classList.toggle("finished");
+// // }
+// // calcTasks()
+// // })
+
+
+function noTasks() {
+  let noShowElement = document.createElement("div");
+  let noShowMsg = document.createTextNode("No Tasks To Show");
+  noShowElement.appendChild(noShowMsg);
+  noShowElement.className = "no-tasks-message";
+  listContainer.appendChild(noShowElement);
+}
+
+function calcTasks(){
+    tasksActive.innerHTML = document.querySelectorAll(".todo-list .content-item").length;
+    completed.innerHTML = document.querySelectorAll(".todo-list .finished").length;
+}
